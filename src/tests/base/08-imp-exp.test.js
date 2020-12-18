@@ -41,7 +41,7 @@ describe('Pruebas en funciones de heroes ' , () => {
 
         console.log( heroesMarvel );
 
-        expect( typeof heroesMarvel ).toBe( 'object' )
+        expect( typeof heroesMarvel ).toBe( 'object' );
         expect( heroesMarvel.length ).toBe( 2 );
     })
     
