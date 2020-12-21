@@ -43,6 +43,20 @@ describe('Pruebas en counter app ', () => {
         expect( contentParrafo ).toBe('9');
     });
     
+    test('debe de poner el valor por defecto con el btn reset ', () => {
+        const value = 106;
+        const wrapper = shallow( <CounterApp value={ value } /> );
+        const buttonIncrement = wrapper.find('button').at(0);
+        const buttonReset = wrapper.find('button').at(1);
+
+        buttonIncrement.simulate('click');
+        buttonIncrement.simulate('click');
+        buttonReset.simulate('click');
+
+        const valorParrafo = wrapper.find('p').text();
+
+        expect( valorParrafo ).toBe(`${ value }`);
+    });
     
 
 });
